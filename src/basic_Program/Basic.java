@@ -8,7 +8,7 @@ public class Basic {
 		System.out.println("1.odd and even no. ");
 		
 		
-		for(int x=50; x<=20; x++)
+		for(int x=1; x<=20; x++)
 		{
 			if(x%2==0)   // remainder 0 then even no and if block executed
 			         	// remainder 1 then odd no and else block executed
@@ -132,6 +132,7 @@ else
 System.out.println(" *****************************************************");
 //System.out.println(" Problem 7: find palindrome number from 1 to 200 ");
 
+
 for(int i=1; i<=200; i++) {
 int reves=0 ,remaider=0 ;
 int num = i;
@@ -157,9 +158,9 @@ System.out.println(" *****************************************************");
 
 System.out.println(" Problem 7: Armstrong number");
 //3: 31 = 3
-//153: 13 + 53 + 33 = 1 + 125+ 27 = 153
-//125: 13 + 23 + 53 = 1 + 8 + 125 = 134 (Not an Armstrong Number)
-//1634: 14 + 64 + 34 + 44 = 1 + 1296 + 81 + 256 = 1643
+//153: 1^3 + 5^3 + 3^3 = 1 + 125+ 27 = 153
+//125: 1^3 + 2^3 + 5^3 = 1 + 8 + 125 = 134 (Not an Armstrong Number)
+//1634: 1^4 + 6^4 + 3^4 + 4^4 = 1 + 1296 + 81 + 256 = 1643
 	
 
 int a=153, tem=a , r , Sum=0;
@@ -168,7 +169,7 @@ int a=153, tem=a , r , Sum=0;
            while(a>0)  {
              r=a%10;
              a=a/10;
-          Sum=Sum+r*r*r;
+          Sum=Sum+r*r*r;  // mulriply r 4 times when size is 4.
            }
        if(tem==Sum)
     	   

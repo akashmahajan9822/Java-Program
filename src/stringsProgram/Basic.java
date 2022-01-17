@@ -6,6 +6,22 @@ import org.testng.annotations.Test;
 
 public class Basic {
 	
+	@Test  (priority=-800)
+	public void CountSamechar() {
+		
+		//find how many time s char in program
+		
+		String inp="The sun is the brightest star";
+		int count =inp.length();
+		int remolength=inp.replaceAll("s","").length();
+		
+		int totalcount=count-remolength;
+		 
+		System.out.println("no of time s is :"+ totalcount);		
+		
+	}
+	
+	
 	@Test  (priority=1)
 	public void SplitString() {
 		
@@ -13,9 +29,12 @@ public class Basic {
 		// Use for loop and array for executing. 
 		// Use to split the Complete String by specific Word 
 		
-		String Study = "Velocity is the Best Classes in India"; 
+		
+		String Study = "i love India"; 
 		System.out.println(Study.length()); 
+		
 		 String[] Str = Study.split(" "); //split by space
+		 
 		 System.out.println(Str.length); 
 		 
 		 for(int i=0; i<=Str.length-1; i++) 
@@ -23,17 +42,20 @@ public class Basic {
 		 System.out.println(Str[i]);
 		
 		 } 
+		 
 		
 	}
 
+	
 	@Test (priority=2)
 	public void reverseString() {
 		
 		 System.out.println("1. Reverse String ");
 	       
 		   	
-			String str="Don't take revenge. let Karma do all the work";
+			String str="i love India";
 			String rev="";
+			
 			
 			for(int i=str.length()-1; i>=0; i--) {     // s.length show string length
 				
@@ -49,7 +71,7 @@ public class Basic {
 		    System.out.println(" or using StringBuilder ");
 		     
 		     
-			StringBuilder a = new StringBuilder("Don't take revenge. let Karma do all the work");
+			StringBuilder a = new StringBuilder("i love India");
 							System.out.println(a);
 							 System.out.println(a.reverse());  //only for string with new keyword
 							 System.out.println(a);
@@ -94,7 +116,7 @@ public class Basic {
 	@Test (priority=2)
 	public void reversewordString() {
 		System.out.println(" 3. Java program to reverse each and every word in the given String text");
-		String str="Don't take revenge. let Karma do all the work";
+		String str="i love India";
 		String rev="";
 		
 		 System.out.println(str);
@@ -123,34 +145,32 @@ public class Basic {
 	}
 	
 	@Test (priority=-1)
-	public void reverseOneWordString() {
+	public void reverseAnyOneWordString() {
 		
-		String str="Akash MAnoj Mahajan";
+		String str="Akash Manoj Mahajan";
 		String rev="";
 		
 		 System.out.println(str);
 		 
 	     String[] words = str.split(" ");
-	     
-	     
-	     String reversedStr = "";
-	     
-	      for(String word : words) {
-	    	  
-	            String reversedWord="";
+	       
+	            String reversedWord="" , value=words[1]; // change this index value of string arrays
 	            
-	            if(word.equals("Mahajan")) {
-	             for(int i=word.length()-1;i>=0;i--) {
-	                  
-	                   reversedWord = reversedWord + word.charAt(i);
-	                  
-	            }}
 	            
-	            // reversedStr = reversedStr +reversedWord +" ";
-	            System.out.println(reversedWord); 
-	     }
+	             for(int i=value.length()-1;i>=0;i--) {
+	                  
+	                   reversedWord = reversedWord + value.charAt(i);
+	                  
+	            }
+	             
+	             System.out.println( words[0]+" "+reversedWord+" "+ words[2]); 
+	            
+	            
+	           
+	           
 	     
 	     
+	      System.out.println(" *****************************************************");     
 	     			
 	}
 	
@@ -158,13 +178,15 @@ public class Basic {
 	@Test (priority=3)
 	public void reverseWordsString() {
 		
-		String str="Don't take revenge. let Karma do all the work";
+		String str="akash manoj mahajan";
 		String rev="";
 		System.out.println(str);	
 	 String[] words = str.split(" ");
+	 System.out.println(words.length);
+	 System.out.println(words[2]);
 	 
 	 for(int i=words.length-1; i>=0; i--)  {
-		 
+		
 		 rev=rev+words[i]+" ";
 		  }
 	 System.out.println(rev);  
@@ -197,6 +219,8 @@ public class Basic {
 	
 	}
 	
+	
+	
 	@Test (priority=50)
 	public void removeSpace() {
 		
@@ -226,6 +250,16 @@ public class Basic {
 		
 		
 	}
+	@Test   (priority=7)
+	public void countWords() {
+		String s= "hi i am akash mahajan ";
+		
+		String[] s1=s.split(s);
+		
+		System.out.println(" size of word" + s1.length);
+		
+	
+		}
 	
 	@Test  (priority=80)
 	public void CountWords() {
