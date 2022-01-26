@@ -1,64 +1,43 @@
 package basic_Program;
 
+import java.util.Scanner;
+
 public class roughj {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int no = 1221, Sum = 0 ;
-		boolean condition = false;
-		
-		int	reverseNo =0, var=no ;
-		
-		while(no!=0){
+		Scanner obje=new Scanner(System.in);
 
-		int	remainder=no%10;
-			reverseNo = reverseNo*10 +remainder;
-			no=no/10;
-			}
+		String str1 =obje.nextLine();
+		String str2=obje.nextLine();
+		
+		String s1[] = {str1};
+		String s2[]= {str2};
+		
+		
+		String s2new="";
 
-			System.out.println(reverseNo);
-			
-			if(reverseNo==var) {
-				
-				System.out.println("palindromNo");
-				
-			}
-			else {System.out.println("not palindromNo");
-				
-			}
-			
+		 System.out.println(s1.length);
+		 System.out.println(s2.length);
 		 
-		if(no!=0 || no!=1){
-
-			for(int i=2; i<no;i++){
-			if(no%i==0){
-			 condition= true;
-			 System.out.println(condition);
-			}
-
-			}
-
-			if(condition){
-			System.out.println(" non perfect no ");
-			}
-			else {
-
-			System.out.println("  perfect no ");
-			}
-
-			}
+		 
 		
+		for(int i=0;i<s1.length;i++) {
+			
+			for(int j=0;i<s2.length;j++) {
+			
+			if(s1[i].equalsIgnoreCase(s2[j])) {
+				
+	    s2new=	str2.replace(s2[j], "");		
+				
+			}
+			
+		}}
 		
-		int factor=1;
-		for(int i=1;i<=no;i++){
-		factor=factor*i;
-
-
-		}
-		System.out.println(factor);
-		
-		
+	
+		 System.out.println(s1);
+		 System.out.println(s2new);
 			}
 	
 	}
